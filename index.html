@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Squire</title>
+  <script src="./dist/squire.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      --badge-green: #60A561;
+      --badge-yellow: #cec93d;
+      --badge-orange: #E9C46A;
+      --badge-red: #DD7373;
+      --badge-blue: #82A0BC;
+      
+      font-family: sans-serif;
+      margin: 0;
+      background: #f2f2f2;
+    }
+
+    #badge-wrapper {
+      margin-top: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #badge-wrapper svg {
+      display: block;
+      width: 200px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      background: #424B54;
+      background: linear-gradient(135deg, #424B54 50%, #60A561 50%);
+      color: white;
+      height: 65px;
+      font: 300 1.2em/1.5 sans-serif;
+      line-height: 65px;
+      padding: 0 32px;
+    }
+
+    .header__logo {
+      font-weight: 500;
+      font-family: monospace;
+      font-size: 26px;
+      letter-spacing: 1px;
+    }
+
+    .header__link  {
+      color: #FFF;
+      font-family: monospace;
+      margin-left: 16px;
+    }
+
+    main {
+      padding: 32px;
+    }
+    
+    section {
+      margin-bottom: 80px;
+    }
+
+    input, select {
+      height: 24px;
+      line-height: 24px;
+      padding: 0 4px;
+      font-family: sans-serif;
+    }
+
+    #examples svg {
+      width: 130px;
+      margin: 8px auto;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header__logo">SQUIRE</div>
+    <nav>
+      <a class="header__link" href="/docs">API</a>
+    </nav>
+  </header>
+  <main>
+    <section id="demo">
+      <h3>SVG badges for your projects.</h3>
+      <div class="controls">
+        <input id="subject" type="text" value="Hello">
+        <input id="value" type="text" value="World">
+        <select id="color">
+          <option value="#60A561">success</option>
+          <option value="#CEC93D">low warning</option>
+          <option value="#E9C46A">high warning</option>
+          <option value="#DD7373">error</option>
+          <option value="#82A0BC">info</option>
+        </select>
+      </div>
+      <div id="badge-wrapper"></div>
+    </section>
+
+    <section id="examples"></section>
+
+    <section id="info">
+      <h3>Issues & Suggestions: </h3>
+      <a href="github.com/iagolast">Github</a>
+    </section>
+  </main>
+
+
+
+  <script>
+    document.querySelector('#subject').addEventListener('input', generateBadge);
+    document.querySelector('#value').addEventListener('input', generateBadge);
+    document.querySelector('#color').addEventListener('change', generateBadge);
+
+
+    function generateBadge() {
+      const subject = document.querySelector('#subject').value;
+      const value = document.querySelector('#value').value;
+      const color = document.querySelector('#color').value;
+
+      document.querySelector('#badge-wrapper').innerHTML = squire.generateBadge(subject, value, color);
+    }
+
+    generateBadge();
+    document.querySelector('#examples').innerHTML =
+      `
+      <h3> See some examples: </h3>
+      ${squire.generateBadge('Downloads', ' +9K ', '#60A561')}
+      ${squire.generateBadge('version', 'v1.2.3', '#82A0BC')}
+      ${squire.generateBadge('status', 'beta', '#CEC93D')}
+      ${squire.generateBadge('buid', 'failed', '#DD7373')}
+      ${squire.generateBadge('open issues', ' 27 ', '#E9C46A')}
+      `;
+  </script>
+</body>
+
+</html>
