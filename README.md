@@ -1,8 +1,8 @@
 # Squire
-![](https://wt-4c17b3c888c61e0fdd8b150c4789e9c0-0.sandbox.auth0-extend.com/squire-server/version/v0.0.2/60A561)
+![](https://wt-4c17b3c888c61e0fdd8b150c4789e9c0-0.sandbox.auth0-extend.com/squire-server/version/v0.0.2/60A561) ![](https://wt-4c17b3c888c61e0fdd8b150c4789e9c0-0.sandbox.auth0-extend.com/squire-server/status/%F0%9F%8D%90%E2%9C%A8/82A0BC)
 
 ## What is Squire? 
-Squire is a set of tools to generate SVG project badges, see a [live demo here](https://iagolast.github.io/squire-core/).
+Squire is a mini javascript library to generate SVG project badges both in node and browser, see a [live demo here](https://iagolast.github.io/squire-core/).
 
 ## API
 
@@ -31,3 +31,8 @@ This method gives an easy way to generate a badge.
 - **subject** The text shown in the left part of the badge.
 - **value:** The text shown in the rectangle shown in the right part of the badge.
 - **color:** The color of the text shown in the right part of the badge.
+
+
+## Creating a server
+
+Use [https://webtask.io](https://webtask.io) and paste the code under the `server/webtask.js` to have your own badge server.
