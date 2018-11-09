@@ -1,6 +1,6 @@
 {
   "name": "squire-badges-core",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "javascript library to generate svg badges",
   "main": "dist/squire.js",
   "directories": {
