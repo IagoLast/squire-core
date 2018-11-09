@@ -1,5 +1,5 @@
 {
-  "name": "squire-core",
+  "name": "squire-badges-core",
   "version": "0.0.0",
   "description": "javascript library to generate svg badges",
   "main": "dist/index.js",
