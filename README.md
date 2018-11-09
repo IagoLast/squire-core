@@ -1,5 +1,5 @@
 # Squire
-![](https://wt-4c17b3c888c61e0fdd8b150c4789e9c0-0.sandbox.auth0-extend.com/squire-server/version/v0.0.2/60A561) ![](https://wt-4c17b3c888c61e0fdd8b150c4789e9c0-0.sandbox.auth0-extend.com/squire-server/status/%F0%9F%8D%90%E2%9C%A8/82A0BC)
+![](https://wt-4c17b3c888c61e0fdd8b150c4789e9c0-0.sandbox.auth0-extend.com/squire-server/version/v0.0.2/60A561) ![](https://wt-4c17b3c888c61e0fdd8b150c4789e9c0-0.sandbox.auth0-extend.com/squire-server/status/%20%F0%9F%8D%90%E2%9C%A8/82A0BC)
 
 ## What is Squire? 
 Squire is a mini javascript library to generate SVG project badges both in node and browser, see a [live demo here](https://iagolast.github.io/squire-core/).
