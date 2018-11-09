@@ -1,5 +1,5 @@
 # Squire
-![](/examples/build-status.svg)
+![](https://wt-4c17b3c888c61e0fdd8b150c4789e9c0-0.sandbox.auth0-extend.com/squire-server/version/v0.0.2/60A561)
 
 ## What is Squire? 
 Squire is a set of tools to generate SVG project badges, see a [live demo here](https://iagolast.github.io/squire-core/).
