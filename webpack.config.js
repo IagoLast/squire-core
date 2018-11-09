@@ -6,6 +6,7 @@ module.exports = {
     filename: 'squire.js',
     library: 'squire',
     libraryTarget: 'umd',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    globalObject: 'this'
   }
 };
